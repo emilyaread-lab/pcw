@@ -14,15 +14,13 @@
     header{border-bottom:1px solid var(--line);background:rgba(247,243,235,.96)}
     .nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .mark{display:flex;align-items:flex-end;gap:3px;transform:rotate(-13deg);padding:4px}
-    .mark i{display:block;width:8px;height:31px;border-radius:3px 3px 1px 1px;position:relative;background:var(--olive)}
-    .mark i:nth-child(2){height:39px;background:var(--terra)}.mark i:nth-child(3){height:27px;background:var(--gold)}
-    .mark i:before{content:"";position:absolute;top:-7px;left:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid #d8c3a0}
+    .brand-logo{display:block;width:64px;height:64px;object-fit:contain;flex-shrink:0}
     .brand strong{display:block;font-size:16px;letter-spacing:-.025em;line-height:1.1}.brand small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:5px}
     nav{display:flex;align-items:center;gap:26px}nav a{text-decoration:none;font-size:14px;font-weight:650}nav a:hover,.text-link:hover{text-decoration:underline}
     .hero{padding:105px 0 95px;position:relative;overflow:hidden}
     .hero:after{content:"";position:absolute;right:-110px;top:24px;width:350px;height:350px;border:1px solid #d8d0c1;border-radius:50%;box-shadow:0 0 0 75px #f0e9dc,0 0 0 76px #d8d0c1;opacity:.5;pointer-events:none}
     .hero-content{position:relative;z-index:1;max-width:770px}
+    .hero-logo{display:block;width:clamp(170px,24vw,240px);height:auto;margin:0 0 28px;mix-blend-mode:multiply}
     .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;color:var(--olive)}
     h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.11;letter-spacing:-.035em}
     h1{font-size:clamp(46px,7vw,82px);margin:22px 0 26px}h2{font-size:clamp(33px,4.5vw,51px);margin:14px 0 17px}h3{font-size:32px;margin:9px 0 12px}
@@ -57,7 +55,7 @@
     .contact .eyebrow{color:#c2d3b3}.contact p{color:#d9dfd6;max-width:620px}.contact a:not(.button){color:#fff;text-underline-offset:4px}
     footer{background:#1b2322;color:#e3e8df;padding:26px 0;font-size:12px}
     .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer a{color:#e3e8df}
-    @media(max-width:690px){.wrap{padding:0 20px}.nav{min-height:75px}.brand strong{font-size:14px}.brand small{font-size:9px}nav{gap:15px}nav a{font-size:12px}.hero{padding:76px 0 75px}.hero:after{right:-250px}.section{padding:60px 0}.cards,.about{grid-template-columns:1fr}.about{gap:20px}.art{height:135px}.card-body{padding:24px}}
+    @media(max-width:690px){.brand-logo{width:45px;height:45px}.wrap{padding:0 20px}.nav{min-height:75px}.brand strong{font-size:14px}.brand small{font-size:9px}nav{gap:15px}nav a{font-size:12px}.hero{padding:76px 0 75px}.hero:after{right:-250px}.section{padding:60px 0}.cards,.about{grid-template-columns:1fr}.about{gap:20px}.art{height:135px}.card-body{padding:24px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
   </style>
 </head>
@@ -65,7 +63,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Pocket Crayon Workshop home">
-        <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <img class="brand-logo" src="./pcw-logo.png" alt="" width="64" height="64">
         <span><strong>Pocket Crayon</strong><small>Workshop Inc.</small></span>
       </a>
       <nav aria-label="Main navigation"><a href="#products">Our products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
@@ -73,6 +71,7 @@
   </header>
   <main id="top">
     <section class="hero"><div class="wrap"><div class="hero-content">
+      <img class="hero-logo" src="./pcw-logo.png" alt="Pocket Crayon logo featuring three coloured crayons" width="240" height="240">
       <p class="eyebrow">An independent Canadian software studio</p>
       <h1>Thoughtful tools for<br>life and work.</h1>
       <p>At Pocket Crayon Workshop, we turn everyday challenges into practical digital products. Small, purposeful tools. Designed to make the things that matter a little easier.</p>
