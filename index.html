@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#222b2b">
+  <meta name="description" content="Pocket Crayon Workshop Inc. is an independent Canadian software studio creating thoughtful tools for life and work.">
+  <title>Pocket Crayon Workshop Inc. — Thoughtful tools for life and work</title>
+  <style>
+    :root{color-scheme:light;--ink:#242e2d;--muted:#58615b;--paper:#f7f3eb;--cream:#fffdf8;--line:#ded9ce;--olive:#63765e;--terra:#b76d50;--gold:#d3a34d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit}a:focus-visible{outline:3px solid var(--terra);outline-offset:4px;border-radius:3px}
+    .wrap{max-width:1120px;margin:auto;padding:0 28px}
+    header{border-bottom:1px solid var(--line);background:rgba(247,243,235,.96)}
+    .nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .mark{display:flex;align-items:flex-end;gap:3px;transform:rotate(-13deg);padding:4px}
+    .mark i{display:block;width:8px;height:31px;border-radius:3px 3px 1px 1px;position:relative;background:var(--olive)}
+    .mark i:nth-child(2){height:39px;background:var(--terra)}.mark i:nth-child(3){height:27px;background:var(--gold)}
+    .mark i:before{content:"";position:absolute;top:-7px;left:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid #d8c3a0}
+    .brand strong{display:block;font-size:16px;letter-spacing:-.025em;line-height:1.1}.brand small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:5px}
+    nav{display:flex;align-items:center;gap:26px}nav a{text-decoration:none;font-size:14px;font-weight:650}nav a:hover,.text-link:hover{text-decoration:underline}
+    .hero{padding:105px 0 95px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;right:-110px;top:24px;width:350px;height:350px;border:1px solid #d8d0c1;border-radius:50%;box-shadow:0 0 0 75px #f0e9dc,0 0 0 76px #d8d0c1;opacity:.5;pointer-events:none}
+    .hero-content{position:relative;z-index:1;max-width:770px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;color:var(--olive)}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.11;letter-spacing:-.035em}
+    h1{font-size:clamp(46px,7vw,82px);margin:22px 0 26px}h2{font-size:clamp(33px,4.5vw,51px);margin:14px 0 17px}h3{font-size:32px;margin:9px 0 12px}
+    .hero p:not(.eyebrow){font-size:clamp(17px,2vw,21px);color:var(--muted);max-width:630px;line-height:1.7}
+    .button{display:inline-block;padding:13px 23px;margin-top:23px;background:var(--ink);color:white;border-radius:6px;font-size:14px;font-weight:700;text-decoration:none;transition:background .2s}
+    .button:hover{background:#44544b}.button.light{background:var(--cream);color:var(--ink)}.button.light:hover{background:#ece5d6}
+    .section{padding:82px 0}.section-heading{max-width:660px;margin-bottom:40px}.section-heading p:last-child{color:var(--muted)}
+    .products{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:11px;overflow:hidden;display:flex;flex-direction:column}
+    .art{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;padding:28px}
+    .art.crew{background:#e3e6d9}.art.research{background:#e7ded1}
+    .art .orb{width:122px;height:122px;border-radius:50%;position:absolute;right:14%;top:22px;opacity:.67}
+    .crew .orb{background:#acbea1;box-shadow:65px 40px 0 -22px #c88d6a,-53px -4px 0 -24px #d2ae61}
+    .research .orb{background:#c6b39e;box-shadow:68px 39px 0 -18px #93a28d,-60px 7px 0 -24px #d8bc7e}
+    .art span{font:normal 36px/1.1 Georgia,serif;letter-spacing:-.04em;z-index:1;max-width:250px}
+    .card-body{padding:30px;flex:1;display:flex;flex-direction:column}
+    .card-body p{color:var(--muted);margin:0 0 15px}.card-body .tag{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--olive)}
+    .card-body .text-link{font-size:14px;font-weight:800;text-underline-offset:4px;margin-top:auto;padding-top:12px}
+    .note{margin-top:28px;font-size:13px;color:var(--muted)}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about p{color:var(--muted)}.about-quote{border-left:3px solid var(--terra);padding:12px 0 12px 28px;font:normal clamp(24px,3vw,36px)/1.35 Georgia,serif}
+    .contact{background:var(--ink);color:var(--cream);padding:70px 0}
+    .contact .eyebrow{color:#c2d3b3}.contact p{color:#d9dfd6;max-width:620px}.contact a:not(.button){color:#fff;text-underline-offset:4px}
+    footer{background:#1b2322;color:#e3e8df;padding:26px 0;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer a{color:#e3e8df}
+    @media(max-width:690px){.wrap{padding:0 20px}.nav{min-height:75px}.brand strong{font-size:14px}.brand small{font-size:9px}nav{gap:15px}nav a{font-size:12px}.hero{padding:76px 0 75px}.hero:after{right:-250px}.section{padding:60px 0}.cards,.about{grid-template-columns:1fr}.about{gap:20px}.art{height:135px}.card-body{padding:24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Pocket Crayon Workshop home">
+        <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>Pocket Crayon</strong><small>Workshop Inc.</small></span>
+      </a>
+      <nav aria-label="Main navigation"><a href="#products">Our products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero"><div class="wrap"><div class="hero-content">
+      <p class="eyebrow">An independent Canadian software studio</p>
+      <h1>Thoughtful tools for<br>life and work.</h1>
+      <p>At Pocket Crayon Workshop, we turn everyday challenges into practical digital products. Small, purposeful tools. Designed to make the things that matter a little easier.</p>
+      <a class="button" href="#products">Explore our products &nbsp;↗</a>
+    </div></div></section>
+    <section class="section products" id="products"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">What we're making</p><h2>Useful by design.</h2><p>Different challenges, the same approach: start with real needs and build tools people can actually use.</p></div>
+      <div class="cards">
+        <article class="card"><div class="art crew"><span>Crew<br>Closet.</span><span class="orb" aria-hidden="true"></span></div>
+          <div class="card-body"><span class="tag">For family life</span><h3>Crew Closet</h3>
+            <p>Know what they have. Know what's next.</p><p>Organize your kids’ gear across sizes, seasons, activities and homes—so you can check what you have before buying what you don't need.</p>
+            <a class="text-link" href="https://www.crewclosetapp.com/">Visit Crew Closet →</a>
+          </div></article>
+        <article class="card"><div class="art research"><span>Research<br>Portage.</span><span class="orb" aria-hidden="true"></span></div>
+          <div class="card-body"><span class="tag">For research teams · In development</span><h3>Research Portage</h3>
+            <p>Recruit → Lead.</p><p>Practical tools to support researcher-led recruitment, onboarding and team development.</p>
+            <span class="text-link" aria-label="Research Portage is in development">More information coming soon</span>
+          </div></article>
+      </div>
+      <p class="note">Each product has its own experience, pricing and support. Pocket Crayon Workshop Inc. is the company behind both.</p>
+    </div></section>
+    <section class="section" id="about"><div class="wrap about"><div>
+      <p class="eyebrow">About the workshop</p><h2>Independent by intention.</h2>
+      <p>Pocket Crayon Workshop Inc. is a New Brunswick–based Canadian corporation developing digital products for people, families and teams.</p>
+      <p>We care about clarity, accessibility and solving problems without adding unnecessary complexity.</p>
+      </div><div class="about-quote">Make it useful.<br>Make it human.<br>Make it work.</div>
+    </div></section>
+    <section class="contact" id="contact"><div class="wrap">
+      <p class="eyebrow">Get in touch</p><h2>Questions about Crew Closet?</h2>
+      <p>For product questions, account support, or subscription enquiries, contact the Crew Closet team.</p>
+      <a class="button light" href="mailto:support@crewclosetapp.com">Email Crew Closet support ↗</a>
+      <p>For policies and account information, visit <a href="https://www.crewclosetapp.com/support">Crew Closet support</a>, <a href="https://www.crewclosetapp.com/terms">terms</a>, and <a href="https://www.crewclosetapp.com/privacy">privacy</a>.</p>
+    </div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Pocket Crayon Workshop Inc. · New Brunswick, Canada</span><span>Thoughtful tools for life and work.</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
