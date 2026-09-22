@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" role="img" aria-labelledby="title desc">
+  <title id="title">Research Portage</title>
+  <desc id="desc">Research Portage logo: an open book crossed by a winding path beneath a warm rising sun.</desc>
+  <g transform="translate(20 26)">
+    <circle cx="112" cy="46" r="34" fill="#D98A4A"/>
+    <path d="M22 92c33-17 67-14 100 8v78c-31-16-64-17-100-5V92Z" fill="#9FB9A8"/>
+    <path d="M202 92c-32-17-66-14-100 8v78c31-16 65-17 100-5V92Z" fill="#155B47"/>
+    <path d="M111 101c-25 19-35 36-29 49 6 13 25 18 21 31-4 13-24 24-39 37" stroke="#FFFDF8" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M111 101c-20 17-28 31-23 41 5 10 20 14 17 25-3 10-18 20-32 31" stroke="#DCE8DF" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M22 180c35-11 68-6 100 14 32-20 66-25 100-14" stroke="#FFFDF8" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M22 191c35-11 68-6 100 14 32-20 66-25 100-14" stroke="#155B47" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="260" y="126" fill="#123F33" font-size="74" font-weight="600" font-family="Georgia, 'Times New Roman', serif">Research Portage</text>
+  <text x="264" y="184" fill="#587C70" font-size="22" font-weight="700" letter-spacing="7" font-family="Arial, Helvetica, sans-serif">RECRUIT · CHECK FIT</text>
+</svg>
